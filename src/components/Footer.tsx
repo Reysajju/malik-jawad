@@ -124,7 +124,7 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a 
-                href="https://www.instagram.com/malikjawad369" 
+                href="https://www.instagram.com/malik.jawad.56829446" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-400 hover:text-white transition-colors"

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Helmet } from 'react-helmet-async';
+import ContactPopup from '../components/ContactPopup';
 import {
   Users,
   UserPlus,
@@ -20,6 +21,7 @@ import {
 } from 'lucide-react';
 
 const Services = () => {
+  const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -227,12 +229,18 @@ const Services = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => setIsContactPopupOpen(true)}
             className="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-medium hover:bg-indigo-50 transition-colors duration-300"
           >
             Get Started Today
           </motion.button>
         </div>
       </motion.section>
+
+      <ContactPopup 
+        isOpen={isContactPopupOpen}
+        onClose={() => setIsContactPopupOpen(false)}
+      />
     </div>
   );
 };

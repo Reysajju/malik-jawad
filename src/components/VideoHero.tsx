@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const VideoHero = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0 bg-black/50 z-10" />
@@ -11,6 +14,7 @@ const VideoHero = () => {
         loop
         muted
         playsInline
+        preload="auto"
       >
         <source
           src="https://raw.githubusercontent.com/Reysajju/malik-jawad/main/WhatsApp%20Video%202025-02-10%20at%2011.14.43%20AM.mp4"
@@ -33,6 +37,7 @@ const VideoHero = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => navigate('/contact')}
             className="bg-indigo-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-indigo-700 transition-colors duration-300"
           >
             Get Started
