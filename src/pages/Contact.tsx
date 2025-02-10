@@ -60,7 +60,7 @@ const Contact = () => {
                 <Facebook className="w-6 h-6" />
               </a>
               <a
-                href="https://www.instagram.com/malik.jawad.56829446"
+                href="https://www.instagram.com/malikjawad369"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors"
